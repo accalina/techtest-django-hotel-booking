@@ -9,7 +9,6 @@ class EventAdmin(admin.ModelAdmin):
         'rpg_status',
         'night_of_stay',
         'timestamp',
-        'updated',
     ]
     list_filter     = ['rpg_status']
     search_fields   = ['hotel_id']

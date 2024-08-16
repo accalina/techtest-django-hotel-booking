@@ -7,7 +7,6 @@ class Event(models.Model):
     rpg_status = models.IntegerField()
     night_of_stay = models.DateField()
     timestamp = models.DateTimeField(auto_now_add=True)
-    updated = models.DateTimeField(auto_now=True)
 
     class Meta:
         verbose_name = 'Event'

@@ -14,7 +14,7 @@ def run_migrate_owner_os():
     
     print(" [*] running data migration...")
     for index, row in enumerate(fileinput):
-        room_reservation_id, night_of_stay, id, status, event_timestamp, hotel_id = fileinput[1].split(',')
+        room_reservation_id, night_of_stay, id, status, event_timestamp, hotel_id = row.split(',')
 
         if index == 0:
             pass

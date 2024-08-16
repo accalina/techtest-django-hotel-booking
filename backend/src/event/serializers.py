@@ -11,5 +11,4 @@ class EventSerializer(serializers.ModelSerializer):
             'rpg_status',
             'night_of_stay',
             'timestamp',
-            'updated',
         ]
