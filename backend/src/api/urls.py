@@ -12,6 +12,7 @@ from rest_framework_simplejwt.views import (
 )
 
 from src.event.views import EventAPIView
+from src.dashboard.views import DashboardAPIView
 
 schema_view = get_schema_view(
     openapi.Info(
@@ -28,6 +29,7 @@ schema_view = get_schema_view(
 
 router = DefaultRouter()
 router.register('event', EventAPIView)
+router.register('dashboard', DashboardAPIView, basename='dashboard')
 
 urlpatterns = [
     path('', schema_view.with_ui('swagger', cache_timeout=0)),

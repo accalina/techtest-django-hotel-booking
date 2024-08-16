@@ -1,0 +1,20 @@
+version: "3.5"
+services:
+  hotel:
+    restart: unless-stopped
+    image: accalina/hotel-techtest:0.1
+    build: .
+    container_name: hotel
+    env_file:
+      - .env
+    ports:
+      - "8080:8000"
+      - "8081:80"
+    volumes:
+      - ./db.sqlite3:/hotel/db.sqlite3
+    command: sh -c "(nginx &) && gunicorn -c config/gunicorn_config.py config.wsgi"
+    healthcheck:
+      test: netstat -tulpn | grep 8000 || exit 1
+      interval: 10s
+      timeout: 5s
+      retries: 2

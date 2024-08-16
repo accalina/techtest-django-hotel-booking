@@ -47,7 +47,6 @@ class EventAPIView(viewsets.ModelViewSet):
                 'end_date_stay', IN_QUERY,
                 'the end date of stay',
                 type='timestamp'),
-
             Parameter(
                 'limit', IN_QUERY,
                 'limit number of displayed data',
