@@ -34,8 +34,10 @@ if env("ENV") == 'dev':
     DEBUG = True
     ALLOWED_HOSTS = ['*']
     CORS_ALLOW_ALL_ORIGINS = True
+    STATIC_URL = '/static/'
 else:
     DEBUG = False
+    STATIC_URL = 'http://localhost:8081/'
     WHITELIST_HOSTS = env("WHITELIST_HOSTS").split(',')
     ALLOWED_HOSTS = WHITELIST_HOSTS
     CORS_ALLOW_ALL_ORIGINS = True
@@ -137,5 +139,4 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-STATIC_URL = 'http://localhost:8081'
 STATIC_ROOT = './static'
