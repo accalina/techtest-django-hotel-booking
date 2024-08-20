@@ -9,6 +9,11 @@ Ensure you have the following installed:
 - Docker (for Docker setup)
 - Docker Compose (for Docker Compose setup)
 
+## Notes
+- For quick start, i've prepared the test db with data populated, you can test it by accessing localhost:8000 (without docker) / localhost:8080 (docker)
+- the endpoint will be served on swagger
+- if you have any issue please create new issue page on this github
+
 ## Installation
 
 ### With Docker
